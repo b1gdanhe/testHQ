@@ -41,6 +41,16 @@ class ProductSeed extends Seeder
                 "sku" => "000005",
                 "name" => "Convertible X2, Electric",
                 "category" => "vehicle",
+            ],
+            [
+                "sku" => "000004",
+                "name" => "Basic coverage1",
+                "category" => "insurance",
+            ],
+            [
+                "sku" => "000005",
+                "name" => "Convertible X2, Electric1",
+                "category" => "vehicle",
             ]
         ];
         foreach ($products as $product) {

@@ -11,8 +11,9 @@ class ProductController extends Controller
 {
     public function index($category = null, $price = null)
     {
-        $products = ProductResource::collection(Product::with('category', 'price')->get());
+        $per_page = request('per_page', 5);
+        $products = Product::with('category', 'price')->paginate($per_page);
 
-        return $products->all();
+        return $products;
     }
 }
